@@ -161,6 +161,7 @@ function setLoading(isLoading) {
 // an object out of it (like {E: 2, L: 1, T: 1}) so we can use that to
 // make sure we get the correct amount of letters marked close instead
 // of just wrong or correct
+
 function makeMap(array) {
     const obj = {};
     for (let i = 0; i < array.length; i++) {
