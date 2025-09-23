@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+
+html {
+    color-scheme: light dark;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.main-descriptions ul {
+    padding: 0;
+}
+
+
+
+
+
+
