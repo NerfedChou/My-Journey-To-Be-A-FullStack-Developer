@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>JSTORE</title>
+</head>
+<body>
+    <header class="main">
+        <nav class="navbar">
+            <div class="logo"><h1>JSTORE</h1></div>
+            <section class="second-group">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+                <li><button class="hamburger"><ion-icon name="menu-outline"></ion-icon></button></li>
+                <div class="cart-icon">
+                    <a href="orders.html" aria-label="View Orders">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </a>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+        <button class = "close"><ion-icon name="close-circle-outline"></ion-icon></button>
+    </aside>
+
+    <main class="content">
+        <div class="hero-spacer"></div>
+        <section class="hero-carousel">
+            <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+            <img src="firstImage.jpg" alt="Hero image 1" class="hero-image active">
+            <img src="secondImage.jpg" alt="Hero image 2" class="hero-image">
+            <img src="thirdImage.webp" alt="Hero image 3" class="hero-image">
+            <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
+        </section>
+        <section id = "products" class = "product-section">
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="iphone17.jpg" alt="Product 1">
+                    <div class="product-name">Iphone 17 pro</div>
+                    <div class="product-price">$2000.99</div>
+                    <button class="product-btn">Buy</button>
+                </div>
+                <div class="product-card">
+                    <img src="iphoneair.jpg" alt="Product 2">
+                    <div class="product-name">Iphone Air A18</div>
+                    <div class="product-price">$1499.00</div>
+                    <button class="product-btn">Buy</button>
+                </div>
+                <div class="product-card">
+                    <img src="applewatch.jpg" alt="Product 3">
+                    <div class="product-name">Apple Watch 7000 series</div>
+                    <div class="product-price">$499.58</div>
+                    <button class="product-btn">Buy</button>
+                </div>
+                <div class="product-card">
+                    <img src="airpods.jpg" alt="Product 4">
+                    <div class="product-name">Airpods Pro</div>
+                    <div class="product-price">$34.49</div>
+                    <button class="product-btn">Buy</button>
+                </div>
+                <div class="product-card">
+                    <img src="macbookpro.jpg" alt="Product 5">
+                    <div class="product-name">MacBook Air 13</div>
+                    <div class="product-price">$699.99</div>
+                    <button class="product-btn">Buy</button>
+                </div>
+                <div class="product-card">
+                    <img src="ipad.jpg" alt="Product 6">
+                    <div class="product-name">Ipad Air</div>
+                    <div class="product-price">$399.99</div>
+                    <button class="product-btn">Buy</button>
+                </div>
+            </div>
+        </section>
+        <!-- Accessories Section with gap -->
+        <div class="section-gap"></div>
+        <section id="accessories" class="accessory-section">
+            <h2 class="accessory-title">Accessories</h2>
+            <div class="accessory-grid">
+                <div class="accessory-card">
+                    <img src="iphonecase.jpg#" alt="Case">
+                    <div class="accessory-name">iPhone Case</div>
+                    <div class="accessory-price">$29.99</div>
+                    <button class="accessory-btn">Order</button>
+                </div>
+                <div class="accessory-card">
+                    <img src="charger.jpg" alt="Charger">
+                    <div class="accessory-name">Fast Charger</div>
+                    <div class="accessory-price">$19.99</div>
+                    <button class="accessory-btn">Order</button>
+                </div>
+                <div class="accessory-card">
+                    <img src="cable.jpg" alt="Cable">
+                    <div class="accessory-name">USB-C Cable</div>
+                    <div class="accessory-price">$9.99</div>
+                    <button class="accessory-btn">Order</button>
+                </div>
+                <div class="accessory-card">
+                    <img src="keyboard.jpg" alt="Keyboard">
+                    <div class="accessory-name">Bluetooth Keyboard</div>
+                    <div class="accessory-price">$49.99</div>
+                    <button class="accessory-btn">Order</button>
+                </div>
+                <div class="accessory-card">
+                    <img src="mouse.jpg" alt="Mouse">
+                    <div class="accessory-name">Wireless Mouse</div>
+                    <div class="accessory-price">$24.99</div>
+                    <button class="accessory-btn">Order</button>
+                </div>
+                <div class="accessory-card">
+                    <img src="stand.jpg" alt="Stand">
+                    <div class="accessory-name">Laptop Stand</div>
+                    <div class="accessory-price">$34.99</div>
+                    <button class="accessory-btn">Order</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../js/animations.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h3>Terms of Service</h3>
+            <p>
+                All prices are for demonstration purposes only and do not reflect real offers.<br>
+                No real purchases or registrations are possible on this site.<br>
+                By using this site, you agree that all data is fake and for educational use only.<br>
+                For more info, see our <a href="#">Agreements</a> and <a href="#">Privacy Policy</a>.
+            </p>
+            <p class="footer-note">&copy; 2024 JSTORE. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

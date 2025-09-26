@@ -125,12 +125,40 @@ header {
     background: linear-gradient(120deg, rgba(255,0,150,0.12), rgba(255,255,255,0.18));
 }
 
+.CTA-wrapper {
+    position: absolute;
+    right: 40%;
+    top: 40%;
+}
+
+.CTA-btn {
+    padding: 24px;
+    border-radius: 24px;
+    background: linear-gradient(120deg, rgba(255,0,150,0.12), rgba(255,255,255,0.18));
+    font-size: 24px;
+    transition: all 0.6s ease;
+    border: 1px solid rgba(255,255,255,1);
+}
+
+.CTA-btn:hover {
+    transform: scale(1.06) translateY(-8px);
+    box-shadow: 0 12px 32px 0 rgba(255,0,150,0.25), 0 2px 8px 0 rgba(0,0,0,0.18);
+}
+
 @media (max-width: 600px) {
     .main-nav-wrapper {
         padding: 10px;
     }
     .spec-items p {
         padding: 10px;
+    }
+    .CTA-wrapper {
+        right: 35%;
+        top: 15px;
+    }
+    .CTA-btn {
+        font-size: 10px;
+        padding: 16px;
     }
 }
 

@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
 </head>
 <body>
-
+    <header class="about-header">
+        <h1 class="fade-in">About JSTORE</h1>
+        <p class="subtitle fade-in-delay">Your trusted source for iPhone products, transparency, and freestyle shopping.</p>
+    </header>
+    <main class="about-main">
+        <section class="about-section fade-in">
+            <h2>Our iPhone Products</h2>
+            <p>
+                At JSTORE, we are passionate about bringing you the latest and greatest iPhone models. Whether you're looking for the newest flagship or a reliable previous generation, our curated selection ensures quality and satisfaction. Each product is carefully showcased with detailed information, high-resolution images, and honest pricing.
+            </p>
+            <p>
+                We believe in making technology accessible and enjoyable for everyone. Our mobile-first design lets you browse and shop seamlessly, whether you're on the go or at home. Explore our range and discover the perfect iPhone to match your lifestyle.
+            </p>
+        </section>
+        <section class="about-section fade-in-delay">
+            <h2>Transparency & Freestyle Shopping</h2>
+            <p>
+                Transparency is at the heart of everything we do. All our prices, product details, and policies are clearly displayed—no hidden fees, no surprises. We want you to shop with confidence, knowing exactly what you're getting.
+            </p>
+            <p>
+                Our freestyle approach means you can browse, compare, and "order" products without any pressure. This site is a demonstration platform, so you can experience the full journey from discovery to checkout, risk-free and commitment-free.
+            </p>
+        </section>
+        <section class="about-section fade-in">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Mobile-first, responsive design for a smooth experience on any device.</li>
+                <li>Honest, transparent information about every product.</li>
+                <li>Fun, interactive browsing with modern animations.</li>
+                <li>Safe, fake registrations—no real data required!</li>
+                <li>Educational and demo purposes only—shop with zero risk.</li>
+                <li>If you want some item contact sir Danny he will sponsor. <a href="prank.html">Click me</a> </li>
+            </ul>
+        </section>
+        <div class="about-actions">
+            <a href="home.html" class="back-home-btn">← Go Back Home</a>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h3>Terms & Conditions</h3>
+            <p>
+                All products, prices, and registrations on this site are for demonstration and educational purposes only.<br>
+                No real purchases or personal data are collected.<br>
+                By using this site, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+            </p>
+            <p class="footer-note">&copy; 2024 JSTORE. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.fade-in').forEach((el, i) => {
+                setTimeout(() => el.classList.add('visible'), 200 + i * 200);
+            });
+            document.querySelectorAll('.fade-in-delay').forEach((el, i) => {
+                setTimeout(() => el.classList.add('visible'), 600 + i * 200);
+            });
+        });
+    </script>
 </body>
 </html>

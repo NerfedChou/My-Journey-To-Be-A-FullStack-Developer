@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>It's a Prank!</title>
+    <link rel="stylesheet" href="../css/prank.css">
+</head>
+<body>
+    <div class="prank-container">
+        <div class="emoji-bounce">😂</div>
+        <h1 class="prank-title">GOTCHA!</h1>
+        <p class="prank-message">
+            Sorry, there’s no sponsorship here.<br>
+            You just got pranked by JSTORE!<br>
+            <span class="prank-small">But hey, thanks for checking! 😜</span>
+        </p>
+        <a href="about.html" class="back-btn">← Go Back About</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const emoji = document.querySelector('.emoji-bounce');
+            emoji.classList.add('active');
+        });
+    </script>
+</body>
+</html>
