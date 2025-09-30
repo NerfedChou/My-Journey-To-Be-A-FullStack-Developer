@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="../css/services.css">
+    <style>
+        .book-container {
+            max-width: 500px;
+            margin: 48px auto;
+            background: #232526;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+            padding: 32px 24px;
+            color: #f1f1f1;
+        }
+        .book-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 24px;
+            color: #ffe082;
+        }
+        .checkout-list {
+            margin-bottom: 24px;
+            background: #181a1b;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .checkout-list strong {
+            color: #ffe082;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #ffe082;
+        }
+        input[type="date"], input[type="text"] {
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 6px;
+            border: none;
+            background: #181a1b;
+            color: #f1f1f1;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .checkout-btn {
+            width: 100%;
+            background: #ffe082;
+            color: #181a1b;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 0;
+            font-size: 1.1rem;
+            margin-top: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .checkout-btn:hover {
+            background: #ffd54f;
+        }
+        .confirmation {
+            margin-top: 24px;
+            background: #232526;
+            border-radius: 8px;
+            padding: 18px;
+            color: #ffe082;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .back-home-btn {
+            margin-top: 24px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="book-title">Book an Appointment</div>
+        <div class="checkout-list">
+            <strong>Selected Service:</strong>
+            <span id="selected-service">Loading...</span>
+        </div>
+        <form id="appointment-form">
+            <div class="form-group">
+                <label for="date">Appointment Date</label>
+                <input type="date" id="date" name="date" required min="">
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required placeholder="Enter your preferred location">
+            </div>
+            <button type="submit" class="checkout-btn">Checkout</button>
+        </form>
+        <div id="confirmation" class="confirmation" style="display:none;"></div>
+        <a href="home.html" class="back-home-btn">← Go Back Home</a>
+    </div>
+    <script>
+        // Set selected service from query string
+        function getQueryParam(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name);
+        }
+        const service = getQueryParam('service');
+        document.getElementById('selected-service').textContent = service ? decodeURIComponent(service) : 'None';
+
+
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        document.getElementById('date').min = `${yyyy}-${mm}-${dd}`;
+
+        document.getElementById('appointment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const date = document.getElementById('date').value;
+            const location = document.getElementById('location').value;
+            const confirmation = document.getElementById('confirmation');
+            confirmation.innerHTML = `
+                <strong>Appointment Confirmed!</strong><br>
+                <br>
+                <strong>Service:</strong> ${service ? decodeURIComponent(service) : 'None'}<br>
+                <strong>Date:</strong> ${date}<br>
+                <strong>Location:</strong> ${location}<br>
+                <br>
+                Thank you for booking with us!
+            `;
+            confirmation.style.display = 'block';
+            document.getElementById('appointment-form').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

@@ -1,15 +1,22 @@
 @import 'base.css';
 
-body{
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #181a1b;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
+body {
     margin: 0;
     padding: 0;
     background-color: black;
     color: white;
     font-family: 'Poppins', sans-serif;
-}
-header {
-    width: 100%;
-    position: relative;
+    padding-top: 70px; /* Add space for fixed header */
 }
 
 .main-nav-wrapper {
@@ -204,8 +211,3 @@ header {
     opacity: 1;
     pointer-events: auto;
 }
-
-
-
-
-

@@ -8,11 +8,11 @@
 </head>
 <body>
     <header class="main">
-        <nav class="navbar">
+        <nav class="navbar" style="position:fixed;top:0;left:0;width:99%;z-index:1000;">
             <div class="logo"><h1>JSTORE</h1></div>
             <section class="second-group">
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -21,6 +21,7 @@
                 <div class="cart-icon">
                     <a href="orders.html" aria-label="View Orders">
                         <ion-icon name="cart-outline"></ion-icon>
+                        <span id="cart-badge" class="cart-badge" style="display:none;">0</span>
                     </a>
                 </div>
             </section>
@@ -28,15 +29,15 @@
     </header>
     <aside class="sidebar">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="services.html">Services</a></li>
         </ul>
         <button class = "close"><ion-icon name="close-circle-outline"></ion-icon></button>
     </aside>
 
-    <main class="content">
+    <main class="content" style="margin-top:70px;">
         <div class="hero-spacer"></div>
         <section class="hero-carousel">
             <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
@@ -51,37 +52,37 @@
                     <img src="iphone17.jpg" alt="Product 1">
                     <div class="product-name">Iphone 17 pro</div>
                     <div class="product-price">$2000.99</div>
-                    <button class="product-btn">Buy</button>
+                    <button class="product-btn" data-name="Iphone 17 pro" data-price="2000.99">Buy</button>
                 </div>
                 <div class="product-card">
                     <img src="iphoneair.jpg" alt="Product 2">
                     <div class="product-name">Iphone Air A18</div>
                     <div class="product-price">$1499.00</div>
-                    <button class="product-btn">Buy</button>
+                    <button class="product-btn" data-name="Iphone Air A18" data-price="1499.00">Buy</button>
                 </div>
                 <div class="product-card">
                     <img src="applewatch.jpg" alt="Product 3">
                     <div class="product-name">Apple Watch 7000 series</div>
                     <div class="product-price">$499.58</div>
-                    <button class="product-btn">Buy</button>
+                    <button class="product-btn" data-name="Apple Watch 7000 series" data-price="499.58">Buy</button>
                 </div>
                 <div class="product-card">
                     <img src="airpods.jpg" alt="Product 4">
                     <div class="product-name">Airpods Pro</div>
                     <div class="product-price">$34.49</div>
-                    <button class="product-btn">Buy</button>
+                    <button class="product-btn" data-name="Airpods Pro" data-price="34.49">Buy</button>
                 </div>
                 <div class="product-card">
                     <img src="macbookpro.jpg" alt="Product 5">
                     <div class="product-name">MacBook Air 13</div>
                     <div class="product-price">$699.99</div>
-                    <button class="product-btn">Buy</button>
+                    <button class="product-btn" data-name="MacBook Air 13" data-price="699.99">Buy</button>
                 </div>
                 <div class="product-card">
                     <img src="ipad.jpg" alt="Product 6">
                     <div class="product-name">Ipad Air</div>
                     <div class="product-price">$399.99</div>
-                    <button class="product-btn">Buy</button>
+                    <button class="product-btn" data-name="Ipad Air" data-price="399.99">Buy</button>
                 </div>
             </div>
         </section>
@@ -94,37 +95,37 @@
                     <img src="iphonecase.jpg#" alt="Case">
                     <div class="accessory-name">iPhone Case</div>
                     <div class="accessory-price">$29.99</div>
-                    <button class="accessory-btn">Order</button>
+                    <button class="accessory-btn" data-name="iPhone Case" data-price="29.99">Order</button>
                 </div>
                 <div class="accessory-card">
                     <img src="charger.jpg" alt="Charger">
                     <div class="accessory-name">Fast Charger</div>
                     <div class="accessory-price">$19.99</div>
-                    <button class="accessory-btn">Order</button>
+                    <button class="accessory-btn" data-name="Fast Charger" data-price="19.99">Order</button>
                 </div>
                 <div class="accessory-card">
                     <img src="cable.jpg" alt="Cable">
                     <div class="accessory-name">USB-C Cable</div>
                     <div class="accessory-price">$9.99</div>
-                    <button class="accessory-btn">Order</button>
+                    <button class="accessory-btn" data-name="USB-C Cable" data-price="9.99">Order</button>
                 </div>
                 <div class="accessory-card">
                     <img src="keyboard.jpg" alt="Keyboard">
                     <div class="accessory-name">Bluetooth Keyboard</div>
                     <div class="accessory-price">$49.99</div>
-                    <button class="accessory-btn">Order</button>
+                    <button class="accessory-btn" data-name="Bluetooth Keyboard" data-price="49.99">Order</button>
                 </div>
                 <div class="accessory-card">
                     <img src="mouse.jpg" alt="Mouse">
                     <div class="accessory-name">Wireless Mouse</div>
                     <div class="accessory-price">$24.99</div>
-                    <button class="accessory-btn">Order</button>
+                    <button class="accessory-btn" data-name="Wireless Mouse" data-price="24.99">Order</button>
                 </div>
                 <div class="accessory-card">
                     <img src="stand.jpg" alt="Stand">
                     <div class="accessory-name">Laptop Stand</div>
                     <div class="accessory-price">$34.99</div>
-                    <button class="accessory-btn">Order</button>
+                    <button class="accessory-btn" data-name="Laptop Stand" data-price="34.99">Order</button>
                 </div>
             </div>
         </section>
@@ -147,5 +148,40 @@
             <p class="footer-note">&copy; 2024 JSTORE. All rights reserved.</p>
         </div>
     </footer>
+    <script src="../js/orders.js"></script>
+    <script>
+    // --- Cart logic for Buy/Order buttons ---
+    function updateCartBadge() {
+        const badge = document.getElementById('cart-badge');
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        if (cart.length > 0) {
+            badge.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+            badge.style.display = 'inline-block';
+        } else {
+            badge.style.display = 'none';
+        }
+    }
+
+    function addToCart(name, price) {
+        let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        const idx = cart.findIndex(item => item.name === name);
+        if (idx > -1) {
+            cart[idx].qty += 1;
+        } else {
+            cart.push({ name, price: parseFloat(price), qty: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartBadge();
+    }
+
+    document.querySelectorAll('.product-btn, .accessory-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            addToCart(this.dataset.name, this.dataset.price);
+        });
+    });
+
+    // Update badge on load
+    updateCartBadge();
+    </script>
 </body>
 </html>

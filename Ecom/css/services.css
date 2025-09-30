@@ -209,3 +209,47 @@ body {
     color: #757575;
     margin: 0;
 }
+
+.book-btn {
+    display: inline-block;
+    margin-top: 18px;
+    background: #ffe082;
+    color: #181a1b;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+    font-size: 1rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+}
+.book-btn:hover {
+    background: #ffd54f;
+    color: #181a1b;
+}
+
+.form-group {
+    width: 100%;
+}
+
+#date {
+    width: 95%;
+}
+#location {
+    width: 95%;
+}
+
+.book-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkout-list {
+    width: 100%;
+}
+
+#appointment-form {
+    width: 100%;
+}

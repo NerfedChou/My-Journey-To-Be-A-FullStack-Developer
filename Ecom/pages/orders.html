@@ -3,8 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <title>Orders</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <style>
+        .orders-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #232526;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+            padding: 32px 24px;
+            color: #f1f1f1;
+        }
+        .orders-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 24px;
+            color: #ffe082;
+        }
+        .orders-list {
+            margin-bottom: 24px;
+        }
+        .orders-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .orders-list th, .orders-list td {
+            padding: 8px 6px;
+            text-align: left;
+        }
+        .orders-list th {
+            color: #ffe082;
+            border-bottom: 1px solid #444;
+        }
+        .orders-list td {
+            border-bottom: 1px solid #333;
+        }
+        .orders-total {
+            text-align: right;
+            font-size: 1.2rem;
+            margin-top: 12px;
+            color: #ffe082;
+        }
+        .payment-options {
+            margin: 24px 0;
+            text-align: center;
+        }
+        .payment-options label {
+            margin-right: 18px;
+            font-size: 1.1rem;
+        }
+        .checkout-btn {
+            width: 100%;
+            background: #ffe082;
+            color: #181a1b;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 0;
+            font-size: 1.1rem;
+            margin-top: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .checkout-btn:hover {
+            background: #ffd54f;
+        }
+        .confirmation {
+            margin-top: 24px;
+            background: #232526;
+            border-radius: 8px;
+            padding: 18px;
+            color: #ffe082;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .empty-cart {
+            text-align: center;
+            color: #bbb;
+            margin: 32px 0;
+        }
+        .back-home-btn {
+            margin-top: 24px;
+            display: inline-block;
+        }
+        .qty-btn {
+            background: #444;
+            color: #ffe082;
+            border: none;
+            border-radius: 4px;
+            padding: 2px 8px;
+            margin: 0 2px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .qty-btn:hover {
+            background: #ffe082;
+            color: #181a1b;
+        }
+        .remove-btn {
+            background: #c62828;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 4px 10px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        .remove-btn:hover {
+            background: #ff5252;
+        }
+    </style>
 </head>
 <body>
-
+    <div class="orders-container">
+        <div class="orders-title">Your Orders</div>
+        <div class="orders-list" id="orders-list"></div>
+        <div class="orders-total" id="orders-total"></div>
+        <div class="payment-options" id="payment-options" style="display:none;">
+            <label>
+                <input type="radio" name="payment" value="Cash on Delivery" checked>
+                Cash on Delivery
+            </label>
+            <label>
+                <input type="radio" name="payment" value="Bank Payment">
+                Bank Payment
+            </label>
+        </div>
+        <button class="checkout-btn" id="checkout-btn" style="display:none;">Checkout</button>
+        <div id="confirmation" class="confirmation" style="display:none;"></div>
+        <a href="home.html" class="back-home-btn">← Go Back Home</a>
+    </div>
+    <script src="../js/orders.js"></script>
 </body>
 </html>
