@@ -3,13 +3,19 @@ body {
     color: #f1f1f1;
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
+    position: relative;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
 }
 
 .services-container {
-    max-width: 900px;
-    margin: 0 auto;
     padding: 32px 16px 48px 16px;
+    position: relative;
+    flex: 1 1 auto; /* Allow main content to grow and push footer down */
+    display: flex;
+    flex-direction: column;
 }
 
 .services-title {
@@ -20,108 +26,51 @@ body {
     letter-spacing: 1px;
 }
 
+
 .services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 1rem;
+    justify-items: center;
+    align-items: stretch;
+    flex: 1 1 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1199px) {
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem 1rem;
+    }
+}
+
+@media (max-width: 699px) {
+    .services-list {
+        grid-template-columns: 1fr;
+        gap: 12px 0;
+    }
+    .service-item {
+        max-width: 98vw;
+    }
+}
+
+.service-item {
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    justify-content: center;
     align-items: center;
-}
-
-.service-item {
-    display: flex;
-    justify-content: center;
-}
-
-.service-item img {
-    width: 100%;
-
-}
-
-/* Grid layout for large screens */
-@media (min-width: 900px) {
-    .services-list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 40px;
-        row-gap: 48px;
-    }
-    .service-item {
-        /* Card layout: image at top, title in middle, desc under */
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        height: 100%;
-        padding: 28px 18px 28px 18px;
-        display: flex; /* Ensure flex is set for column layout */
-        justify-content: flex-start;
-    }
-    .service-item img {
-        width: 180px;      /* Enlarged image */
-        height: 180px;     /* Enlarged image */
-        object-fit: cover;
-        border-radius: 12px;
-        margin: 0 0 18px 0;
-        background: #222;
-        box-shadow: 0 1px 8px rgba(0,0,0,0.13);
-        display: block;
-        align-self: center; /* This centers the image horizontally in the flex column */
-    }
-    .service-info {
-        flex: unset;
-        width: 100%;
-    }
-    .service-info h2 {
-        margin: 0 0 10px 0;
-        font-size: 1.25rem;
-        color: #ffe082;
-        font-weight: 600;
-    }
-    .service-info p {
-        margin: 0;
-        color: #e0e0e0;
-        line-height: 1.6;
-        font-size: 1rem;
-    }
-}
-
-/* Ensure column layout on tablets and mobile */
-@media (max-width: 899px) {
-    .services-list {
-        display: flex;
-        flex-direction: column;
-        gap: 36px; /* More gap between items */
-    }
-    .service-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 16px;
-    }
-    .service-item img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1/1;
-        display: block;
-        align-self: center;
-        justify-self: center;
-    }
-    .service-info h2 {
-        font-size: 1.1rem;
-    }
-    .services-title {
-        font-size: 2rem;
-    }
-}
-
-.service-item {
-    display: flex;
-    align-items: flex-start;
     background: #232526;
     border-radius: 14px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    padding: 20px;
+    padding: 10px 0;
     transition: transform 0.2s;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    min-width: 0;
+    height: 520px;
+    justify-content: flex-start;
+    margin: 0 auto;
 }
 
 .service-item:hover {
@@ -130,18 +79,29 @@ body {
 }
 
 .service-item img {
-    width: 220px;
-    height: 220px;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     border-radius: 16px;
     background: #222;
     flex-shrink: 0;
     box-shadow: 0 1px 12px rgba(0,0,0,0.13);
     display: block;
+    margin: 24px auto 16px auto;
+    max-width: 100%;
 }
 
 .service-info {
-    flex: 1;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .service-info h2 {
@@ -149,22 +109,36 @@ body {
     font-size: 1.3rem;
     color: #ffe082;
     font-weight: 600;
+    word-break: break-word;
+    text-align: center;
 }
 
 .service-info p {
-    margin: 0;
+    margin: 0 0 12px 0;
     color: #e0e0e0;
     line-height: 1.6;
     font-size: 1rem;
+    word-break: break-word;
+    text-align: center;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    max-height: 170px;
+    overflow-y: auto;
 }
 
 .services-footer {
+    position: relative;
     background: #181a1b;
     color: #bdbdbd;
     padding: 32px 0 18px 0;
     text-align: center;
     margin-top: 48px;
     border-top: 1px solid #232526;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .footer-content {
@@ -212,7 +186,7 @@ body {
 
 .book-btn {
     display: inline-block;
-    margin-top: 18px;
+    margin-top: 20px;
     background: #ffe082;
     color: #181a1b;
     font-weight: 600;
@@ -253,3 +227,5 @@ body {
 #appointment-form {
     width: 100%;
 }
+
+/* Remove the duplicate grid and flex styles from other media queries to avoid conflicts */

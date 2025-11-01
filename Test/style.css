@@ -1,0 +1,28 @@
+.box {
+    border: 1px solid black;
+    padding: 10px;
+    width: 30%;
+    height: 100vh;
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    padding: 10px;
+    left: 20%;
+    top: 20%;
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.box2 {
+    position: relative;
+    padding: 10px;
+    left: 20%;
+    border: 1px solid #006fff;
+    width: 200px;
+    height: 200px;
+    background-color: #003cff;
+}

@@ -13,32 +13,48 @@
             box-shadow: 0 2px 16px rgba(0,0,0,0.18);
             padding: 32px 24px;
             color: #f1f1f1;
+            box-sizing: border-box;
+            width: 100%;
         }
         .book-title {
             text-align: center;
             font-size: 2rem;
             margin-bottom: 24px;
             color: #ffe082;
+            word-break: break-word;
         }
         .checkout-list {
             margin-bottom: 24px;
             background: #181a1b;
             border-radius: 8px;
             padding: 16px;
+            box-sizing: border-box;
+            width: 100%;
+            overflow-wrap: break-word;
         }
         .checkout-list strong {
             color: #ffe082;
         }
         .form-group {
             margin-bottom: 18px;
+            width: 475px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        form {
+            width: 100%;
+            box-sizing: border-box;
         }
         label {
             display: block;
             margin-bottom: 6px;
             color: #ffe082;
+            word-break: break-word;
         }
         input[type="date"], input[type="text"] {
             width: 100%;
+            box-sizing: border-box;
             padding: 8px 10px;
             border-radius: 6px;
             border: none;
@@ -46,6 +62,8 @@
             color: #f1f1f1;
             font-size: 1rem;
             margin-bottom: 4px;
+            display: block;
+            max-width: 100%;
         }
         .checkout-btn {
             width: 100%;
@@ -59,6 +77,7 @@
             margin-top: 12px;
             cursor: pointer;
             transition: background 0.2s;
+            box-sizing: border-box;
         }
         .checkout-btn:hover {
             background: #ffd54f;
@@ -71,10 +90,21 @@
             color: #ffe082;
             text-align: center;
             font-size: 1.1rem;
+            word-break: break-word;
         }
         .back-home-btn {
             margin-top: 24px;
             display: inline-block;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .book-container {
+                padding: 18px 6px;
+                max-width: 98vw;
+            }
+            .checkout-list, .confirmation {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -121,7 +151,7 @@
             const location = document.getElementById('location').value;
             const confirmation = document.getElementById('confirmation');
             confirmation.innerHTML = `
-                <strong>Appointment Confirmed!</strong><br>
+                <strong>Appointment Confirmed!</strong><br>-
                 <br>
                 <strong>Service:</strong> ${service ? decodeURIComponent(service) : 'None'}<br>
                 <strong>Date:</strong> ${date}<br>
